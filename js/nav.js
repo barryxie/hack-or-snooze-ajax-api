@@ -27,6 +27,17 @@ function navSubmitStoryClick(evt){
 
 $navSubmitStory.on("click", navSubmitStoryClick);
 
+
+/** Show favorite stories on click on "favorites" */
+
+function navFavoritesClick(evt) {
+  console.debug("navFavoritesClick", evt);
+  hidePageComponents();
+  putFavoritesListOnPage();
+}
+
+$body.on("click", "#nav-favorites", navFavoritesClick);
+
 /** Show login/signup on click on "login" */
 
 function navLoginClick(evt) {
